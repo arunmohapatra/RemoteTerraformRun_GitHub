@@ -5,7 +5,7 @@ terraform {
     organization = "LTC_HYD"
 
     workspaces {
-      name    = "LTC_WorkSpace_For_Terraform_CLI_Run"
+      name    = "RemoteTerraformRun_GitHub"
       project = "LTC_HYD_PROJECT"
     }
   }
@@ -86,6 +86,7 @@ resource "aws_instance" "linux_ec2" {
     Name      = "LTC-HYD-Linux-EC2"
     Project   = "LTC_HYD_PROJECT"
     ManagedBy = "Terraform"
+	CommandFrom = "GitHub"
   }
 }
 
