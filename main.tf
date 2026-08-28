@@ -86,7 +86,7 @@ resource "aws_instance" "linux_ec2" {
     Name      = "LTC-HYD-Linux-EC2"
     Project   = "LTC_HYD_PROJECT"
     ManagedBy = "Terraform"
-	CommandFrom = "GitHub_1"
+	CommandFrom = "GitHub"
   }
 }
 
