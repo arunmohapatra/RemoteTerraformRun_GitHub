@@ -73,21 +73,21 @@ data "aws_ami" "amazon_linux" {
 # EC2 Instance
 # --------------------------------------------------
 
-# resource "aws_instance" "linux_ec2" {
+resource "aws_instance" "linux_ec2" {
 
-#   ami           = data.aws_ami.amazon_linux.id
-#   instance_type = var.instance_type
+  ami           = data.aws_ami.amazon_linux.id
+  instance_type = var.instance_type
 
-#   subnet_id = data.aws_subnet.default.id
+  subnet_id = data.aws_subnet.default.id
 
-#   associate_public_ip_address = true
+  associate_public_ip_address = true
 
-#   tags = {
-#     Name      = "LTC-HYD-Linux-EC2"
-#     Project   = "LTC_HYD_PROJECT"
-#     ManagedBy = "Terraform"
-# 	CommandFrom = "GitHub"
-#   }
-# }
+  tags = {
+    Name      = "LTC-HYD-Linux-EC2"
+    Project   = "LTC_HYD_PROJECT"
+    ManagedBy = "Terraform"
+	CommandFrom = "GitHub"
+  }
+}
 
 
